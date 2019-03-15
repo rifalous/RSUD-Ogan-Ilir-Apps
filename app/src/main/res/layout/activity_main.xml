@@ -33,7 +33,7 @@
                 android:id="@+id/subTitle"
                 android:layout_below="@+id/dashboard"
                 android:layout_marginTop="6dp"
-                android:text="Selamat Datang"
+                android:text="@string/selamat_datang"
                 android:visibility="visible"
                 android:textSize="14sp"
                 android:textColor="#52BAFF"
@@ -41,8 +41,8 @@
                 android:layout_height="wrap_content" />
             <ImageView
                 android:id="@+id/logo"
-                android:layout_marginRight="6dp"
-                android:layout_alignParentLeft="true"
+                android:layout_marginEnd="6dp"
+                android:layout_alignParentStart="true"
                 android:layout_width="62dp"
                 android:layout_height="62dp"
                 android:src="@drawable/logo"/>
