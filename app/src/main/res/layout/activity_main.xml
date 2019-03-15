@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,11 +6,10 @@
     android:layout_height="match_parent"
     app:columnCount="2"
     app:rowCount="2"
-    app:orientation="horizontal"
-    >
+    app:orientation="horizontal">
 
     <FrameLayout
-        app:layout_columnWeight="1"
+        app:layout_columnWeight="3"
         app:layout_rowWeight="1"
         android:background="#5F9EA0"
         >
@@ -23,17 +21,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/user"
-                android:src="@drawable/user"/>
+                android:id="@+id/doctor"
+                android:src="@drawable/doctor"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/user"
+                android:layout_below="@+id/doctor"
                 android:layout_centerHorizontal="true"
-                android:text="Profile"/>
+                android:text="Dokter"/>
         </RelativeLayout>
     </FrameLayout>
 
@@ -50,17 +48,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/job"
-                android:src="@drawable/pin"/>
+                android:id="@+id/medicine"
+                android:src="@drawable/medicine"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/job"
+                android:layout_below="@+id/medicine"
                 android:layout_centerHorizontal="true"
-                android:text="Search Job"/>
+                android:text="Obat"/>
         </RelativeLayout>
     </FrameLayout>
 
@@ -77,25 +75,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/notif"
-                android:src="@drawable/bell"/>
+                android:id="@+id/room"
+                android:src="@drawable/room"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/notif"
+                android:layout_below="@+id/room"
                 android:layout_centerHorizontal="true"
-                android:text="Notification"/>
+                android:text="Kamar"/>
         </RelativeLayout>
     </FrameLayout>
 
     <FrameLayout
         app:layout_columnWeight="1"
         app:layout_rowWeight="1"
-        android:background="#B8860B"
-        >
+        android:background="#B8860B">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -105,17 +102,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/mail"
-                android:src="@drawable/mail"/>
+                android:id="@+id/regist"
+                android:src="@drawable/regist"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/mail"
+                android:layout_below="@+id/regist"
                 android:layout_centerHorizontal="true"
-                android:text="Messages"/>
+                android:text="Registrasi"/>
         </RelativeLayout>
     </FrameLayout>
 
@@ -133,17 +130,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/rate"
-                android:src="@drawable/star"/>
+                android:id="@+id/contact"
+                android:src="@drawable/contact"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rate"
+                android:layout_below="@+id/contact"
                 android:layout_centerHorizontal="true"
-                android:text="Rate Card"/>
+                android:text="Kontak"/>
         </RelativeLayout>
     </FrameLayout>
 
@@ -160,17 +157,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:id="@+id/rev"
-                android:src="@drawable/like"/>
+                android:id="@+id/about"
+                android:src="@drawable/about"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rev"
+                android:layout_below="@+id/about"
                 android:layout_centerHorizontal="true"
                 android:textColor="#FFFFFF"
-                android:text="Review "/>
+                android:text="Tentang Aplikasi"/>
         </RelativeLayout>
     </FrameLayout>
 </android.support.v7.widget.GridLayout>
