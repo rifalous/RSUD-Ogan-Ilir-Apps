@@ -18,16 +18,16 @@ public class OnBoardActivity extends TutorialActivity {
         //slider 1
         addFragment(new Step.Builder().setTitle("This is header 1")
                 .setContent("This is content 1")
-                .setBackgroundColor(Color.parseColor("#CAE1FF")) // int background color
-                .setDrawable(R.drawable.img1) // int top drawable
+                .setBackgroundColor(Color.parseColor("#324cad")) // int background color
+                .setDrawable(R.drawable.bitcoin) // int top drawable
                 .setSummary("This is summary 1")
                 .build());
 
         //slider 2
         addFragment(new Step.Builder().setTitle("This is header 2")
                 .setContent("This is content 2")
-                .setBackgroundColor(Color.parseColor("#CAE1FF")) // int background color
-                .setDrawable(R.drawable.img2) // int top drawable
+                .setBackgroundColor(Color.parseColor("#324cad")) // int background color
+                .setDrawable(R.drawable.bookmark) // int top drawable
                 .setSummary("This is summary 2")
                 .build());
 
@@ -35,8 +35,8 @@ public class OnBoardActivity extends TutorialActivity {
         //slider 3
         addFragment(new Step.Builder().setTitle("This is header 3")
                 .setContent("This is content 3")
-                .setBackgroundColor(Color.parseColor("#CAE1FF")) // int background color
-                .setDrawable(R.drawable.img3) // int top drawable
+                .setBackgroundColor(Color.parseColor("#324cad")) // int background color
+                .setDrawable(R.drawable.bug) // int top drawable
                 .setSummary("This is summary 3")
                 .build());
 
@@ -44,8 +44,8 @@ public class OnBoardActivity extends TutorialActivity {
         //slider 4
         addFragment(new Step.Builder().setTitle("This is header 4")
                 .setContent("This is content 4")
-                .setBackgroundColor(Color.parseColor("#CAE1FF")) // int background color
-                .setDrawable(R.drawable.img4) // int top drawable
+                .setBackgroundColor(Color.parseColor("#324cad")) // int background color
+                .setDrawable(R.drawable.chat) // int top drawable
                 .setSummary("This is summary 4")
                 .build());
     }

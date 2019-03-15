@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RSUD Ogan Ilir</string>
+    <string name="dokter">Dokter</string>
+    <string name="obat">Obat</string>
+    <string name="kamar">Kamar</string>
+    <string name="registrasi">Registrasi</string>
+    <string name="kontak">Kontak</string>
+    <string name="tentang_aplikasi">Tentang</string>
+    <string name="masih_kosong">Masih Kosong</string>
 </resources>

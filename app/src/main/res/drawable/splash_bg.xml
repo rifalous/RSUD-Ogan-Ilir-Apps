@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/colorPrimary"/>
+    <item android:drawable="@color/colorPrimaryDark"/>
 
-    <item android:gravity="center" android:width="200dp" android:height="200dp">
+    <item android:gravity="center" android:width="200dp" android:height="230dp">
         <bitmap
             android:gravity="fill_horizontal|fill_vertical"
-            android:src="@drawable/codepolitan"/>
+            android:src="@drawable/logo"/>
     </item>
 
 </layer-list>

@@ -1,173 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.GridLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:columnCount="2"
-    app:rowCount="2"
-    app:orientation="horizontal">
+    android:background="@drawable/bgapps"
+    tools:context=".MainActivity">
 
-    <FrameLayout
-        app:layout_columnWeight="3"
-        app:layout_rowWeight="1"
-        android:background="#5F9EA0"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/doctor"
-                android:src="@drawable/doctor"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/doctor"
-                android:layout_centerHorizontal="true"
-                android:text="Dokter"/>
-        </RelativeLayout>
-    </FrameLayout>
-
-    <FrameLayout
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="#D2691E">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/medicine"
-                android:src="@drawable/medicine"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
+                android:layout_toEndOf="@id/logo"
+                android:id="@+id/dashboard"
+                android:text="@string/app_name"
+                android:textSize="22sp"
                 android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/medicine"
-                android:layout_centerHorizontal="true"
-                android:text="Obat"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_toEndOf="@id/logo"
+                android:id="@+id/subTitle"
+                android:layout_below="@+id/dashboard"
+                android:layout_marginTop="6dp"
+                android:text="Selamat Datang"
+                android:visibility="visible"
+                android:textSize="14sp"
+                android:textColor="#52BAFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:src="@drawable/logo"/>
+
         </RelativeLayout>
-    </FrameLayout>
-
-    <FrameLayout
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="#CD5C5C">
-
-        <RelativeLayout
+        
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <ImageView
+            <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/room"
-                android:src="@drawable/room"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/room"
-                android:layout_centerHorizontal="true"
-                android:text="Kamar"/>
-        </RelativeLayout>
-    </FrameLayout>
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
 
-    <FrameLayout
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="#B8860B">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/doctor"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/doctor"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/regist"
-                android:src="@drawable/regist"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/regist"
-                android:layout_centerHorizontal="true"
-                android:text="Registrasi"/>
-        </RelativeLayout>
-    </FrameLayout>
+                    <TextView
+                        android:text="@string/dokter"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-    <FrameLayout
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="#2E8B57"
-        >
+                </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            </android.support.v7.widget.CardView>
 
-            <ImageView
+            <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/contact"
-                android:src="@drawable/contact"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/contact"
-                android:layout_centerHorizontal="true"
-                android:text="Kontak"/>
-        </RelativeLayout>
-    </FrameLayout>
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
 
-    <FrameLayout
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="#BC8F8F">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/medicine"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/medicine"/>
 
-            <ImageView
+                    <TextView
+                        android:text="@string/obat"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:id="@+id/about"
-                android:src="@drawable/about"/>
-            <TextView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/room"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/room"/>
+
+                    <TextView
+                        android:text="@string/kamar"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/about"
-                android:layout_centerHorizontal="true"
-                android:textColor="#FFFFFF"
-                android:text="Tentang Aplikasi"/>
-        </RelativeLayout>
-    </FrameLayout>
-</android.support.v7.widget.GridLayout>
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/regist"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/registration"/>
+
+                    <TextView
+                        android:text="@string/registrasi"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/contact"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/contacts"/>
+
+                    <TextView
+                        android:text="@string/kontak"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/about"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/about"/>
+
+                    <TextView
+                        android:text="@string/tentang_aplikasi"
+                        android:textSize="18sp"
+                        android:textColor="#6f6f6f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
