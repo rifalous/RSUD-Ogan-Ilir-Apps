@@ -16,37 +16,37 @@ public class OnBoardActivity extends TutorialActivity {
         super.onCreate(savedInstanceState);
 
         //slider 1
-        addFragment(new Step.Builder().setTitle("This is header 1")
-                .setContent("This is content 1")
+        addFragment(new Step.Builder().setTitle("Cek Dokter yang Tersedia")
+                .setContent("Cek Dokter yang Tersedia Berdasarkan Jam dan Poli Asalnya.")
                 .setBackgroundColor(Color.parseColor("#324cad")) // int background color
-                .setDrawable(R.drawable.bitcoin) // int top drawable
-                .setSummary("This is summary 1")
+                .setDrawable(R.drawable.onboardingdoctor) // int top drawable
+                .setSummary("")
                 .build());
 
         //slider 2
-        addFragment(new Step.Builder().setTitle("This is header 2")
-                .setContent("This is content 2")
+        addFragment(new Step.Builder().setTitle("Cek Ketersediaan Stok Obat")
+                .setContent("Cek Ketersediaan Stok Obat berdasarkan Nama/Jenis Obatnya.")
                 .setBackgroundColor(Color.parseColor("#324cad")) // int background color
-                .setDrawable(R.drawable.bookmark) // int top drawable
-                .setSummary("This is summary 2")
+                .setDrawable(R.drawable.onboardingmedicine) // int top drawable
+                .setSummary("")
                 .build());
 
 
         //slider 3
-        addFragment(new Step.Builder().setTitle("This is header 3")
-                .setContent("This is content 3")
+        addFragment(new Step.Builder().setTitle("Cek Ketersediaan Kamar Rumah Sakit")
+                .setContent("Cek Ketersediaan Kamar yang Kosong untuk Rawat Inap")
                 .setBackgroundColor(Color.parseColor("#324cad")) // int background color
-                .setDrawable(R.drawable.bug) // int top drawable
-                .setSummary("This is summary 3")
+                .setDrawable(R.drawable.onboardingroom) // int top drawable
+                .setSummary("")
                 .build());
 
 
         //slider 4
-        addFragment(new Step.Builder().setTitle("This is header 4")
-                .setContent("This is content 4")
+        addFragment(new Step.Builder().setTitle("Registrasi Antrian")
+                .setContent("Lakukan Registrasi Antrian Pada Menu Registrasi")
                 .setBackgroundColor(Color.parseColor("#324cad")) // int background color
-                .setDrawable(R.drawable.chat) // int top drawable
-                .setSummary("This is summary 4")
+                .setDrawable(R.drawable.onboardingregist) // int top drawable
+                .setSummary("")
                 .build());
     }
 

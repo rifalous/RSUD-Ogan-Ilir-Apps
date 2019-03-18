@@ -67,24 +67,25 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/doctor"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/doctor"/>
+                        android:src="@drawable/doctor" />
 
                     <TextView
-                        android:text="@string/dokter"
-                        android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="6dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/dokter"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -113,6 +114,7 @@
                         android:src="@drawable/medicine"/>
 
                     <TextView
+                        android:layout_marginTop="6dp"
                         android:text="@string/obat"
                         android:textSize="18sp"
                         android:textColor="#6f6f6f"
@@ -146,6 +148,7 @@
                         android:src="@drawable/room"/>
 
                     <TextView
+                        android:layout_marginTop="6dp"
                         android:text="@string/kamar"
                         android:textSize="18sp"
                         android:textColor="#6f6f6f"
@@ -180,6 +183,7 @@
                         android:src="@drawable/registration"/>
 
                     <TextView
+                        android:layout_marginTop="6dp"
                         android:text="@string/registrasi"
                         android:textSize="18sp"
                         android:textColor="#6f6f6f"
@@ -214,6 +218,7 @@
                         android:src="@drawable/contacts"/>
 
                     <TextView
+                        android:layout_marginTop="6dp"
                         android:text="@string/kontak"
                         android:textSize="18sp"
                         android:textColor="#6f6f6f"
@@ -248,6 +253,7 @@
                         android:src="@drawable/about"/>
 
                     <TextView
+                        android:layout_marginTop="6dp"
                         android:text="@string/tentang_aplikasi"
                         android:textSize="18sp"
                         android:textColor="#6f6f6f"
