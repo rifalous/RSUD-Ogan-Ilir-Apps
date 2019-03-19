@@ -29,35 +29,35 @@ public class MainActivity extends AppCompatActivity {
         btnMedicine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, MedicineActivity.class));
             }
         });
 
         btnRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, RoomActivity.class));
             }
         });
 
         btnRegist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
 
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
         });
 
         btnContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DoctorActivity.class));
+                startActivity(new Intent(MainActivity.this, ContactActivity.class));
             }
         });
     }

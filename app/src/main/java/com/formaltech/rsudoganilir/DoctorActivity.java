@@ -57,6 +57,7 @@ public class DoctorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_doctor);
 
         ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setDivider(null);
 
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
