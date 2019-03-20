@@ -65,7 +65,7 @@ public class ContactActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ContactActivity.this, MainActivity.class));
+                onBackPressed();
             }
         });
     }
