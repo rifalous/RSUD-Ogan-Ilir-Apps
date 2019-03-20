@@ -98,7 +98,7 @@
                 android:id="@+id/phone1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
                 android:src="@drawable/ic_phone" />
@@ -136,7 +136,7 @@
                 android:id="@+id/phone2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
                 android:src="@drawable/ic_phone"/>
@@ -180,7 +180,7 @@
                 android:id="@+id/location"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginBottom="12dp"
                 android:src="@drawable/ic_location" />
 

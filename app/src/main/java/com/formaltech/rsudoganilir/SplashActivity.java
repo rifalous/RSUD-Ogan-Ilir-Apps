@@ -17,18 +17,18 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
 
-        /* Hilangkan Comment
+        //Hilangkan Comment
         if (firstStart) {
             showOnboarding();
         } else {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
-        }*/
+        }
 
-        Intent intent = new Intent(this, OnBoardActivity.class);
+/*      Intent intent = new Intent(this, OnBoardActivity.class);
         startActivity(intent);
-        finish();
+        finish();*/
 
     }
 

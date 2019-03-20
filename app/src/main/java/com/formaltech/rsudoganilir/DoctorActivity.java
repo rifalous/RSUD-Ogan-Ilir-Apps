@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 public class DoctorActivity extends AppCompatActivity {
 
-    ListView mListView;
-
     int[] images = {
             R.drawable.doctor1,
             R.drawable.doctor2,
