@@ -1,15 +1,105 @@
 package com.formaltech.rsudoganilir;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MedicineActivity extends AppCompatActivity {
+    /*  CUSTOM ADAPTER + JSON API
+    public class MedicineActivity  extends AppCompatActivity {
+
+
+        private static final String JSON_URL = "https://rifalous.github.io/Pandora-Box/medicine.json";
+
+
+        ListView listView;
+        private List<MedicineItem> medicineItemList;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            listView =  findViewById(R.id.listView);
+            medicineItemList = new ArrayList<>();
+
+
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                    MedicineItem medicineItem = medicineItemList.get(position);
+
+                    Intent i = new Intent(getApplicationContext(), DetailMedicineActivity.class);
+                    i.putExtra(DetailMedicineActivity.EXTRA_MEDICINE, medicineItem);
+                    startActivity(i);
+
+
+                }
+            });
+            loadPlayer();
+        }
+
+        private void loadPlayer() {
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            try {
+                                JSONObject obj = new JSONObject(response);
+                                JSONArray playerArray = obj.getJSONArray("obat");
+
+                                for (int i = 0; i < playerArray.length(); i++) {
+
+                                    JSONObject playerObject = playerArray.getJSONObject(i);
+
+
+                                    MedicineItem medicineItem = new MedicineItem(playerObject.getString("nama"),
+                                            playerObject.getString("satuan"),
+                                            playerObject.getString("stok"));
+
+                                    medicineItemList.add(medicineItem);
+                                }
+
+                                ListViewAdapter adapter = new ListViewAdapter(medicineItemList, getApplicationContext());
+
+                                listView.setAdapter(adapter);
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        }
+    }*/
 
     String[] names = {
             "Aipi",
@@ -34,8 +124,8 @@ public class MedicineActivity extends AppCompatActivity {
             "Strip",
             "Strip",
             "Strip",
-            "Strip",
             "Botol",
+            "Strip",
             "Dos",
             "Strip",
             "Botol",
@@ -69,6 +159,10 @@ public class MedicineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setDivider(null);

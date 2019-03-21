@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">RSUD Ogan Ilir</string>
     <string name="dokter">Dokter</string>
+    <string name="jadwal_dokter">Jadwal Dokter</string>
+    <string name="info_obat">Informasi Obat</string>
+    <string name="info_kamar">Informasi Ketersediaan Kamar</string>
     <string name="obat">Obat</string>
     <string name="kamar">Kamar</string>
     <string name="registrasi">Registrasi</string>

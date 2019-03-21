@@ -1,9 +1,11 @@
 package com.formaltech.rsudoganilir;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -32,12 +34,12 @@ public class DoctorActivity extends AppCompatActivity {
     };
 
     String[] poli = {
-            "Poli Gigi",
-            "Poli Anak",
-            "Poli Bedah",
-            "Poli Umum",
-            "Poli Saraf",
-            "Poli Mata"
+            "Poliklinik Gigi",
+            "Poliklinik Anak",
+            "Poliklinik Bedah",
+            "Poliklinik Umum",
+            "Poliklinik Saraf",
+            "Poliklinik Mata"
     };
 
     String[] jam = {
@@ -53,6 +55,10 @@ public class DoctorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setDivider(null);

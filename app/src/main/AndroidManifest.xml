@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".RoomActivity" />
+
+        <activity android:name=".AboutActivity"/>
+        <activity android:name=".RoomActivity"
+            android:label="@string/info_kamar" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MedicineActivity" />
-        <activity android:name=".DoctorActivity" />
+        <activity android:name=".MedicineActivity"
+            android:label="@string/info_obat" />
+        <activity android:name=".DoctorActivity"
+            android:label="@string/jadwal_dokter" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -33,7 +37,7 @@
         <activity
             android:name=".ContactActivity"
             android:screenOrientation="nosensor"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <data android:scheme="geo" />
@@ -42,7 +46,9 @@
         </activity>
     </application>
 
+    <!--  Intent Phone Call Permissions -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <!--  Internet Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

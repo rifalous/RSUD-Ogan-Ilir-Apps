@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/dokter"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -116,7 +116,7 @@
                     <TextView
                         android:layout_marginTop="6dp"
                         android:text="@string/obat"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -150,7 +150,7 @@
                     <TextView
                         android:layout_marginTop="6dp"
                         android:text="@string/kamar"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -185,7 +185,7 @@
                     <TextView
                         android:layout_marginTop="6dp"
                         android:text="@string/registrasi"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -220,7 +220,7 @@
                     <TextView
                         android:layout_marginTop="6dp"
                         android:text="@string/kontak"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -255,7 +255,7 @@
                     <TextView
                         android:layout_marginTop="6dp"
                         android:text="@string/tentang_aplikasi"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

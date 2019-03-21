@@ -7,6 +7,13 @@
     tools:context=".RoomActivity"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"/>
+
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +21,7 @@
         android:textStyle="bold"
         android:text="Daftar Kamar Yang Tersedia"
         android:textSize="16sp"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"/>-->
 
     <ListView
         android:id="@+id/listView"
