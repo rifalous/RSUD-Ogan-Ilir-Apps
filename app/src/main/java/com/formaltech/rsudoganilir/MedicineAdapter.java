@@ -1,4 +1,3 @@
-/*
 package com.formaltech.rsudoganilir;
 
 import android.content.Context;
@@ -22,8 +21,6 @@ public class MedicineAdapter extends ArrayAdapter<MedicineItem> {
         this.context = context;
     }
 
-
-
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
@@ -43,4 +40,4 @@ public class MedicineAdapter extends ArrayAdapter<MedicineItem> {
 
         return listViewItem;
     }
-}*/
+}

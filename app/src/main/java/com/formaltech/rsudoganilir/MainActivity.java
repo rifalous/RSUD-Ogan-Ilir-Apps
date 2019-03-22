@@ -85,4 +85,15 @@ public class MainActivity extends AppCompatActivity {
         }, 2000);
     }
 
+    //Todo:
+    //- Application/Launcher Icon	(To Do)
+    //- Modify Dokter, Obat, Kamar Screen	(To Do)
+    //- Design Registrasi Pasien Menu Screen	(To Do)
+    //- Implement Pull Refresh	(To Do)
+    //- Remove All Warning Signs (Extract Strings)	(Doing)
+    //- Implement JSON API display into ListView with Custom Adapter (Dokter, Kamar, Obat)	(Doing)
+    //- Implement Check Internet Connection	(Doing)
+    //- Lock All Screen to Portrait	(Doing)
+    //- Add Back Button on Toolbar	(Done)
+
 }

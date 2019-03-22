@@ -1,4 +1,3 @@
-/*
 package com.formaltech.rsudoganilir;
 
 import android.os.Parcel;
@@ -71,4 +70,3 @@ public class MedicineItem implements Parcelable {
         }
     };
 }
-*/
