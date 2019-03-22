@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    tools:ignore="ExtraText">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,6 +15,6 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="#fff"
-        android:text="Menu Registrasi Belum Tersedia"/>
-
+        android:text="@string/belum_tersedia"/>
 </android.support.constraint.ConstraintLayout>
+

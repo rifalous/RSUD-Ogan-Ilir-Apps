@@ -11,7 +11,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_marginTop="32dp"
@@ -71,13 +71,15 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/doctor"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/doctor" />
+                        android:src="@drawable/doctor"
+                        android:contentDescription="@string/dokter_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
@@ -105,13 +107,15 @@
                     android:padding="16dp"
                     android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/medicine"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/medicine"/>
+                        android:src="@drawable/medicine"
+                        android:contentDescription="@string/obat_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
@@ -139,13 +143,15 @@
                     android:padding="16dp"
                     android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/room"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/room"/>
+                        android:src="@drawable/room"
+                        android:contentDescription="@string/kamar_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
@@ -174,13 +180,15 @@
                     android:padding="16dp"
                     android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/regist"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/registration"/>
+                        android:src="@drawable/registration"
+                        android:contentDescription="@string/registrasi_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
@@ -209,13 +217,15 @@
                     android:padding="16dp"
                     android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/contact"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/contacts"/>
+                        android:src="@drawable/contacts"
+                        android:contentDescription="@string/kontak_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
@@ -244,13 +254,15 @@
                     android:padding="16dp"
                     android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/about"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/about"/>
+                        android:src="@drawable/about"
+                        android:contentDescription="@string/tentang_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"

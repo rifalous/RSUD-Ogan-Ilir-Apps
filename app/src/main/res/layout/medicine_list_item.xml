@@ -13,7 +13,7 @@
         android:background="@drawable/layout_border"
         android:layout_width="match_parent"
         android:layout_height="100dp">
-        
+
         <ImageView
             android:id="@+id/imageMedicine"
             android:visibility="gone"
@@ -21,7 +21,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/gambar_obat" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -32,7 +33,7 @@
 
             <TextView
                 android:id="@+id/medicine_nama"
-                android:text="Nama Obat"
+                android:text="@string/nama_obat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -46,7 +47,7 @@
                 <TextView
                     android:id="@+id/satuan"
                     android:layout_marginTop="3dp"
-                    android:text="Satuan :"
+                    android:text="@string/satuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"/>
@@ -55,7 +56,7 @@
                     android:id="@+id/medicine_satuan"
                     android:layout_marginTop="3dp"
                     android:layout_marginStart="12dp"
-                    android:text="Satuan"
+                    android:text="@string/satuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"/>
@@ -71,7 +72,7 @@
                     android:id="@+id/stok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stok :"
+                    android:text="@string/stok"
                     android:textSize="16sp" />
 
                 <TextView
@@ -79,14 +80,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="31dp"
-                    android:text="Stok"
+                    android:text="@string/stok"
                     android:textSize="16sp" />
 
             </LinearLayout>
-
 
         </LinearLayout>
 
     </LinearLayout>
 
 </RelativeLayout>
+

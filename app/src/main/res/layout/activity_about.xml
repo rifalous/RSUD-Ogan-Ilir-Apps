@@ -21,7 +21,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="22sp"
-            android:text="RSUD Android Apps"/>
+            android:text="@string/rsud_android_apps"/>
 
         <ImageView
             android:layout_width="225dp"
@@ -38,7 +38,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:text="Version 1.0"/>
+            android:text="@string/version"/>
 
         <TextView
             android:layout_gravity="center"
@@ -47,7 +47,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:text="Developed by"/>
+            android:text="@string/developed_by"/>
 
         <TextView
             android:layout_gravity="center"
@@ -56,7 +56,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:text="Formaltech Solusindo"/>
+            android:text="@string/formaltech_solusindo"/>
 
     </LinearLayout>
 </ScrollView>

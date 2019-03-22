@@ -13,7 +13,7 @@
         android:background="@drawable/layout_border"
         android:layout_width="match_parent"
         android:layout_height="100dp">
-        
+
         <ImageView
             android:id="@+id/imageRoom"
             android:visibility="gone"
@@ -21,7 +21,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/gambar_ruangan" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -32,7 +33,7 @@
 
             <TextView
                 android:id="@+id/room_nama"
-                android:text="Nama Kamar"
+                android:text="@string/nama_kamar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -46,7 +47,7 @@
                 <TextView
                     android:id="@+id/terisi"
                     android:layout_marginTop="3dp"
-                    android:text="Terisi :"
+                    android:text="@string/terisi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"/>
@@ -57,7 +58,7 @@
                     android:layout_height="25dp"
                     android:layout_marginStart="31dp"
                     android:layout_marginTop="3dp"
-                    android:text="Terisi"
+                    android:text="@string/terisi"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -71,7 +72,7 @@
                     android:id="@+id/kosong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kosong :"
+                    android:text="@string/kosong"
                     android:textSize="16sp" />
 
                 <TextView
@@ -79,14 +80,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Kosong"
+                    android:text="@string/kosong"
                     android:textSize="16sp" />
 
             </LinearLayout>
-
 
         </LinearLayout>
 
     </LinearLayout>
 
 </RelativeLayout>
+

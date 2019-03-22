@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MedicineActivity extends AppCompatActivity {
     /*  CUSTOM ADAPTER + JSON API
@@ -162,7 +163,11 @@ public class MedicineActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setDivider(null);
@@ -203,5 +208,11 @@ public class MedicineActivity extends AppCompatActivity {
 
             return view;
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

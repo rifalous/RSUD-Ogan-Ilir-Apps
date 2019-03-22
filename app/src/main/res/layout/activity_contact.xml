@@ -25,7 +25,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_arrow_back"/>
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/profile_pic_rsud" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -48,7 +49,7 @@
                 android:layout_marginStart="16dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
-                android:text="RSUD Kab. Ogan Ilir"
+                android:text="@string/rsud_kab_ogan_ilir"
                 android:textSize="22sp"
                 android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
@@ -57,7 +58,7 @@
                 android:id="@+id/subjudul"
                 android:layout_toEndOf="@+id/profile_image"
                 android:layout_below="@+id/judul"
-                android:text="Rumah Sakit di Indonesia"
+                android:text="@string/rumah_sakit_di_indonesia"
                 android:textSize="14sp"
                 android:layout_marginStart="16dp"
                 android:paddingBottom="12dp"
@@ -70,7 +71,7 @@
                 android:layout_toEndOf="@+id/profile_image"
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="16dp"
-                android:text="Rating 4.4 dari 5.0 | 12 Reviews"
+                android:text="@string/rating_reviews"
                 android:textSize="14sp"
                 android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
@@ -82,7 +83,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="48dp"
-                android:text="Buka 24 Jam"
+                android:text="@string/buka_24_jam"
                 android:textSize="14sp"
                 android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
@@ -102,7 +103,8 @@
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
-                android:src="@drawable/ic_phone" />
+                android:src="@drawable/ic_phone"
+                android:contentDescription="@string/phone_call" />
 
             <TextView
                 android:id="@+id/phone_number1"
@@ -112,7 +114,7 @@
                 android:layout_toEndOf="@+id/phone1"
                 android:paddingTop="12dp"
                 android:paddingBottom="6dp"
-                android:text="(0711) 7583023"
+                android:text="@string/_0711_7583023"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -123,7 +125,7 @@
                 android:layout_below="@+id/phone_number1"
                 android:layout_marginStart="48dp"
                 android:layout_toEndOf="@+id/phone1"
-                android:text="Telepon Kantor"
+                android:text="@string/telepon_kantor1"
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </RelativeLayout>
@@ -148,7 +150,7 @@
                 android:layout_marginStart="48dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="6dp"
-                android:text="0812-7823-404"
+                android:text="@string/_0812_7823_404"
                 android:textSize="16sp"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
@@ -159,7 +161,7 @@
                 android:layout_below="@+id/phone_number2"
                 android:id="@+id/desc_phone_number2"
                 android:layout_marginStart="48dp"
-                android:text="Telepon Kantor"
+                android:text="@string/telepon_kantor2"
                 android:textSize="14sp"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
@@ -192,7 +194,7 @@
                 android:layout_marginStart="48dp"
                 android:layout_toEndOf="@+id/location"
                 android:paddingBottom="6dp"
-                android:text="Tanjung Sejaro, Indralaya,Ogan Ilir Regency, Sumatra Selatan, 30814"
+                android:text="@string/alamat"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -203,7 +205,7 @@
                 android:layout_below="@+id/text_location"
                 android:layout_marginStart="48dp"
                 android:layout_toEndOf="@+id/location"
-                android:text="Alamat Kantor"
+                android:text="@string/alamat_kantor"
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </RelativeLayout>

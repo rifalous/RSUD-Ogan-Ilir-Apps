@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class DoctorActivity extends AppCompatActivity {
 
     int[] images = {
@@ -58,7 +60,11 @@ public class DoctorActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setDivider(null);
@@ -102,5 +108,11 @@ public class DoctorActivity extends AppCompatActivity {
 
             return view;
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
