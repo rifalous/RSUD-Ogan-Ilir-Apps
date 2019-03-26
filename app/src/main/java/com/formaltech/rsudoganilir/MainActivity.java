@@ -1,6 +1,7 @@
 package com.formaltech.rsudoganilir;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ImageView btnDoctor = findViewById(R.id.doctor);
         ImageView btnMedicine = findViewById(R.id.medicine);
         ImageView btnRoom = findViewById(R.id.room);
@@ -86,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Todo:
-    //- Application/Launcher Icon	(To Do)
     //- Modify Dokter, Obat, Kamar Screen	(To Do)
     //- Design Registrasi Pasien Menu Screen	(To Do)
     //- Implement Pull Refresh	(To Do)
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
     //- Implement JSON API display into ListView with Custom Adapter (Dokter, Kamar, Obat)	(Doing)
     //- Implement Check Internet Connection	(Doing)
     //- Lock All Screen to Portrait	(Doing)
+    //- Application/Launcher Icon	(Done)
     //- Add Back Button on Toolbar	(Done)
+    //- Implement double tap to exit (Done)
 
 }

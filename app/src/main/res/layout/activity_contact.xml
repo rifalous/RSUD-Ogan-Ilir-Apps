@@ -4,11 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgapps"
     android:orientation="vertical"
     tools:context=".ContactActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"/>
+
     <LinearLayout
+        android:background="@drawable/bgapps"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -19,21 +25,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/back"
-                android:layout_marginEnd="6dp"
-                android:layout_alignParentStart="true"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_arrow_back"
-                android:contentDescription="@string/profile_pic_rsud" />
+
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="20dp"
                 android:layout_alignParentTop="true"
-                android:layout_below="@+id/back"
                 android:layout_alignParentStart="true"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
@@ -43,7 +41,6 @@
 
 
             <TextView
-                android:layout_below="@id/back"
                 android:layout_toEndOf="@+id/profile_image"
                 android:id="@+id/judul"
                 android:layout_marginStart="16dp"

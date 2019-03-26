@@ -7,8 +7,10 @@
     <string name="obat">Obat</string>
     <string name="kamar">Kamar</string>
     <string name="registrasi">Registrasi</string>
+    <string name="registrasi_pasien">Registrasi Antrian</string>
     <string name="kontak">Kontak</string>
-    <string name="tentang_aplikasi">Tentang</string>
+    <string name="tentang">Tentang</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="masih_kosong">Masih Kosong</string>
     <string name="selamat_datang">Selamat Datang</string>
     <string name="daftar_dokter_rsud_ogan_ilir">Daftar Dokter RSUD Ogan Ilir</string>

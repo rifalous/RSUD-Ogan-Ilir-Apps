@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.Objects;
+
 public class ContactActivity extends AppCompatActivity {
 
     double latitude = 40.714728;
@@ -18,10 +20,17 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-        ImageView btnBack = findViewById(R.id.back);
         ImageView btnCall1 = findViewById(R.id.phone1);
         ImageView btnCall2 = findViewById(R.id.phone2);
         ImageView btnLocation = findViewById(R.id.location);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        setSupportActionBar(toolbar);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         btnCall1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +71,11 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
+    }
 
-
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
