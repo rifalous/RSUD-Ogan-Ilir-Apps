@@ -10,16 +10,17 @@
     tools:ignore="ExtraText">
 
     <ImageView
-        android:id="@+id/icinternet"
+        android:id="@+id/no_internet_iv"
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:src="@drawable/icinternet"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/titlepage"
+        android:id="@+id/title_status"
         android:text="@string/tidak_ada_internet"
         android:textColor="#fff"
         android:textSize="28sp"
@@ -30,11 +31,12 @@
         android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icinternet"
+        app:layout_constraintTop_toBottomOf="@id/no_internet_iv"
+        android:visibility="gone"
         />
 
     <TextView
-        android:id="@+id/subtitlepage"
+        android:id="@+id/subtitle_status"
         android:text="@string/tidak_terhubung_ke_internet"
         android:textColor="#fff"
         android:textSize="18sp"
@@ -47,11 +49,12 @@
         android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titlepage"
+        app:layout_constraintTop_toBottomOf="@id/title_status"
+        android:visibility="gone"
         />
 
     <Button
-        android:id="@+id/btnrecon"
+        android:id="@+id/btn_recon"
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -65,7 +68,19 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/masih_kosong"
+        android:text="@string/masih_kosong"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
 
