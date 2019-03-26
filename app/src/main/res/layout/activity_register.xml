@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/titlepage"
-        android:text="Tidak Ada Internet"
+        android:text="@string/tidak_ada_internet"
         android:textColor="#fff"
         android:textSize="28sp"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/subtitlepage"
-        android:text="Sepertinya perangkat kamu tidak terhubung ke Internet"
+        android:text="@string/tidak_terhubung_ke_internet"
         android:textColor="#fff"
         android:textSize="18sp"
         android:textAlignment="center"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="44dp"
         android:background="@drawable/bgbtnrecon"
         android:paddingBottom="23dp"
-        android:text="RECONNECT"
+        android:text="@string/reconnect"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -67,13 +67,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-<!--    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:text="@string/belum_tersedia"/>-->
 </android.support.constraint.ConstraintLayout>
 

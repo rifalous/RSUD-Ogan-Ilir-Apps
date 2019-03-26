@@ -17,7 +17,6 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
 
-        //Hilangkan Comment
         if (firstStart) {
             showOnboarding();
         } else {
@@ -26,9 +25,11 @@ public class SplashActivity extends AppCompatActivity {
             finish();
         }
 
-/*      Intent intent = new Intent(this, OnBoardActivity.class);
+        /*
+        Intent intent = new Intent(this, OnBoardActivity.class);
         startActivity(intent);
-        finish();*/
+        finish();
+        */
 
     }
 

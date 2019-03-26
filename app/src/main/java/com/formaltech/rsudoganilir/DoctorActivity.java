@@ -2,9 +2,8 @@ package com.formaltech.rsudoganilir;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,12 +52,17 @@ public class DoctorActivity extends AppCompatActivity {
             "17.00"
     };
 
+    Toolbar toolbar;
+    ListView listView;
+    ImageView mImageView;
+    TextView namaDokter, poliDokter, jamDokter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
@@ -66,7 +70,7 @@ public class DoctorActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         listView.setDivider(null);
 
         CustomAdapter customAdapter = new CustomAdapter();
@@ -91,15 +95,15 @@ public class DoctorActivity extends AppCompatActivity {
             return 0;
         }
 
+        @SuppressLint("ViewHolder")
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.doctor_list_item, null);
 
-            ImageView mImageView = (ImageView)view.findViewById(R.id.imageDoctor);
-
-            TextView namaDokter = (TextView)view.findViewById(R.id.doctor_nama);
-            TextView poliDokter = (TextView)view.findViewById(R.id.doctor_poli);
-            TextView jamDokter = (TextView)view.findViewById(R.id.doctor_jam);
+            mImageView = view.findViewById(R.id.imageDoctor);
+            namaDokter = view.findViewById(R.id.doctor_nama);
+            poliDokter = view.findViewById(R.id.doctor_poli);
+            jamDokter = view.findViewById(R.id.doctor_jam);
 
             mImageView.setImageResource(images[i]);
             namaDokter.setText(names[i]);

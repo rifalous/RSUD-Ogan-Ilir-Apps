@@ -1,10 +1,9 @@
 package com.formaltech.rsudoganilir;
 
 import android.content.Intent;
-import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -90,11 +89,11 @@ public class MainActivity extends AppCompatActivity {
     //Todo:
     //- Modify Dokter, Obat, Kamar Screen	(To Do)
     //- Design Registrasi Pasien Menu Screen	(To Do)
-    //- Implement Pull Refresh	(To Do)
-    //- Remove All Warning Signs (Extract Strings)	(Doing)
+    //- Implement Pull Refresh	(Doing)
     //- Implement JSON API display into ListView with Custom Adapter (Dokter, Kamar, Obat)	(Doing)
     //- Implement Check Internet Connection	(Doing)
-    //- Lock All Screen to Portrait	(Doing)
+    //- Remove All Warning Signs (Extract Strings)	(Done)
+    //- Lock All Screen to Portrait	(Done)
     //- Application/Launcher Icon	(Done)
     //- Add Back Button on Toolbar	(Done)
     //- Implement double tap to exit (Done)

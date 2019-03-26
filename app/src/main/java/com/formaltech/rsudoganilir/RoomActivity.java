@@ -1,5 +1,6 @@
 package com.formaltech.rsudoganilir;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,12 +51,15 @@ public class RoomActivity extends AppCompatActivity {
             "0"
     };
 
+    Toolbar toolbar;
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
@@ -63,7 +67,7 @@ public class RoomActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         listView.setDivider(null);
 
         CustomAdapter customAdapter = new CustomAdapter();
@@ -88,6 +92,7 @@ public class RoomActivity extends AppCompatActivity {
             return 0;
         }
 
+        @SuppressLint("ViewHolder")
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.room_list_item, null);

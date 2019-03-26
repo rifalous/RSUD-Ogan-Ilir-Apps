@@ -16,6 +16,8 @@ public class ContactActivity extends AppCompatActivity {
     double latitude = 40.714728;
     double longitude = -73.998672;
 
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,7 @@ public class ContactActivity extends AppCompatActivity {
         ImageView btnCall2 = findViewById(R.id.phone2);
         ImageView btnLocation = findViewById(R.id.location);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
@@ -57,8 +59,11 @@ public class ContactActivity extends AppCompatActivity {
         btnLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-/*              Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=34.99,-106.61(Treasure)"));
-                startActivity(intent);*/
+
+                /*
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=34.99,-106.61(Treasure)"));
+                startActivity(intent);
+                */
 
                 String label = "ABC Label";
                 String uriBegin = "geo:" + latitude + "," + longitude;
