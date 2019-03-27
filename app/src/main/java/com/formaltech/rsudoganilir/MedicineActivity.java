@@ -24,6 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class MedicineActivity  extends AppCompatActivity {
 
     private static final String JSON_URL = "https://rifalous.github.io/Pandora-Box/medicine.json";

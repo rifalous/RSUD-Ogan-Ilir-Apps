@@ -33,11 +33,12 @@
 
             <TextView
                 android:id="@+id/room_nama"
-                android:text="@string/nama_kamar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/nama_kamar"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -48,17 +49,24 @@
                     android:id="@+id/terisi"
                     android:layout_marginTop="3dp"
                     android:text="@string/terisi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"/>
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="16sp" />
+
+                <TextView
                     android:id="@+id/room_terisi"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="31dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="3dp"
                     android:text="@string/terisi"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -70,9 +78,15 @@
 
                 <TextView
                     android:id="@+id/kosong"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:text="@string/kosong"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
                     android:textSize="16sp" />
 
                 <TextView
@@ -81,7 +95,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="@string/kosong"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

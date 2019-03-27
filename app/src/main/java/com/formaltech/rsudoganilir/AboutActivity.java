@@ -7,6 +7,9 @@ import android.support.v7.widget.Toolbar;
 
 import java.util.Objects;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class AboutActivity extends AppCompatActivity {
     Toolbar toolbar;
 

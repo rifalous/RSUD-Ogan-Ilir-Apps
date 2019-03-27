@@ -3,6 +3,9 @@ package com.formaltech.rsudoganilir;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class MedicineItem implements Parcelable {
     private String nama, satuan, stok;
 

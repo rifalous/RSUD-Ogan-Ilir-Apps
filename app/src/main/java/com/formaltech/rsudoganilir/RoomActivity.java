@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class RoomActivity extends AppCompatActivity {
 
     String[] names = {
@@ -53,6 +56,7 @@ public class RoomActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ListView listView;
+    TextView namaKamar, terisiKamar, kosongKamar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +101,9 @@ public class RoomActivity extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.room_list_item, null);
 
-            TextView namaKamar = (TextView)view.findViewById(R.id.room_nama);
-            TextView terisiKamar = (TextView)view.findViewById(R.id.room_terisi);
-            TextView kosongKamar = (TextView)view.findViewById(R.id.room_kosong);
+            namaKamar = view.findViewById(R.id.room_nama);
+            terisiKamar = view.findViewById(R.id.room_terisi);
+            kosongKamar = view.findViewById(R.id.room_kosong);
 
             namaKamar.setText(names[i]);
             terisiKamar.setText(terisi[i]);

@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class DoctorActivity extends AppCompatActivity {
 
     int[] images = {
@@ -44,12 +47,12 @@ public class DoctorActivity extends AppCompatActivity {
     };
 
     String[] jam = {
-            "12.00",
-            "13.00",
-            "14.00",
-            "15.00",
-            "16.00",
-            "17.00"
+            "08.00 - 12.00",
+            "09.00 - 14.00",
+            "09.00 - 14.00",
+            "09.30 - 14.30",
+            "11.00 - 16.00",
+            "10.30 - 16.00"
     };
 
     Toolbar toolbar;

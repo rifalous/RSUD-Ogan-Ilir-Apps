@@ -6,8 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="@color/colorPrimaryDark"
+    android:id="@+id/constraintReserv"
     tools:ignore="ExtraText">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/no_internet_iv"
@@ -77,10 +84,11 @@
         android:text="@string/masih_kosong"
         android:textColor="#fff"
         android:textSize="28sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:visibility="visible"/>
 
 </android.support.constraint.ConstraintLayout>
 

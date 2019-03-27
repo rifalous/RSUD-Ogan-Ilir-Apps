@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import java.util.Objects;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class ContactActivity extends AppCompatActivity {
 
     double latitude = 40.714728;

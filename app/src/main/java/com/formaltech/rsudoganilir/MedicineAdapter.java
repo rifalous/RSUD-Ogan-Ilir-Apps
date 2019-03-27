@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class MedicineAdapter extends ArrayAdapter<MedicineItem> {
 
     private List<MedicineItem> medicineItemList;

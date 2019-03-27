@@ -7,6 +7,9 @@ import android.os.Bundle;
 import com.hololo.tutorial.library.Step;
 import com.hololo.tutorial.library.TutorialActivity;
 
+/**
+ * Created by Rifal on 14/03/2019.
+ */
 public class OnBoardActivity extends TutorialActivity {
 
     @Override

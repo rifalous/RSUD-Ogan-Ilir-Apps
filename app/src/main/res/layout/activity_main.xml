@@ -192,7 +192,7 @@
 
                     <TextView
                         android:layout_marginTop="6dp"
-                        android:text="@string/registrasi"
+                        android:text="@string/reservasi"
                         android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"
