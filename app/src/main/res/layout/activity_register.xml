@@ -1,94 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearReserv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RegisterActivity"
-    android:id="@+id/constraintReserv"
     tools:ignore="ExtraText">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimaryDark"
-        tools:ignore="MissingConstraints" />
+        android:background="?attr/colorPrimaryDark" />
 
     <ImageView
         android:id="@+id/no_internet_iv"
         android:layout_width="360dp"
         android:layout_height="360dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
         android:src="@drawable/icinternet"
-        tools:ignore="MissingConstraints"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/title_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="@string/tidak_ada_internet"
         android:textColor="#fff"
         android:textSize="28sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_internet_iv"
         android:visibility="gone"
-        />
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp" />
 
     <TextView
         android:id="@+id/subtitle_status"
-        android:text="@string/tidak_terhubung_ke_internet"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:textAlignment="center"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:lineSpacingExtra="6dp"
         android:layout_gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_status"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/tidak_terhubung_ke_internet"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"
         android:visibility="gone"
-        />
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp" />
 
     <Button
         android:id="@+id/btn_recon"
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="44dp"
         android:background="@drawable/bgbtnrecon"
         android:paddingBottom="23dp"
         android:text="@string/reconnect"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone" />
-
+        android:visibility="gone"
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="658dp" />
 
     <TextView
-        android:id="@+id/masih_kosong"
-        android:text="@string/masih_kosong"
-        android:textColor="#fff"
-        android:textSize="28sp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/label_pasien"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        tools:ignore="MissingConstraints"
-        android:visibility="visible"/>
+        android:text="Pasien"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rekamedikEditText"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:hint="No. Rekam Medik"
+        android:inputType="number"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="10" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/namapasienEditText"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:hint="Nama Pasien"
+        android:inputType="textPersonName"
+        app:met_floatingLabel="highlight" />
+
+    <TextView
+        android:id="@+id/label_reservasi"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Reservasi"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/tanggaljam"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:hint="Tanggal dan Jam Berobat"
+        android:inputType="textPersonName"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/poliEditText"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Poli"
+        android:inputType="text"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/namadokterEditText"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Dokter"
+        android:inputType="textPersonName"
+        app:met_floatingLabel="highlight" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bgbtnrecon"
+        android:paddingBottom="23dp"
+        android:text="SUBMIT"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp" />
+</LinearLayout>
 

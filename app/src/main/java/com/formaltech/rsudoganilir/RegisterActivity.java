@@ -7,14 +7,16 @@ import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.Objects;
 
@@ -23,23 +25,30 @@ import java.util.Objects;
  */
 public class RegisterActivity extends AppCompatActivity {
 
-    ConstraintLayout constraintReserv;
+    LinearLayout linearReserv;
     Toolbar toolbar;
     Button btn_recon;
     ImageView no_internet_iv;
-    TextView title_status, subtitle_status, masih_kosong;
+    TextView title_status, subtitle_status, label_pasien, label_reservasi;
+    MaterialEditText rekamedikEditText, namapasienEditText, tanggaljam, poliEditText, namadokterEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        constraintReserv = findViewById(R.id.constraintReserv);
+        linearReserv = findViewById(R.id.linearReserv);
         title_status = findViewById(R.id.title_status);
         subtitle_status = findViewById(R.id.subtitle_status);
-        masih_kosong = findViewById(R.id.masih_kosong);
         no_internet_iv = findViewById(R.id.no_internet_iv);
         btn_recon = findViewById(R.id.btn_recon);
+        label_pasien = findViewById(R.id.label_pasien);
+        label_reservasi = findViewById(R.id.label_reservasi);
+        rekamedikEditText = findViewById(R.id.rekamedikEditText);
+        namapasienEditText = findViewById(R.id.namapasienEditText);
+        tanggaljam = findViewById(R.id.tanggaljam);
+        poliEditText = findViewById(R.id.poliEditText);
+        namadokterEditText = findViewById(R.id.namadokterEditText);
 
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
         Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/MMedium.ttf");
@@ -86,8 +95,14 @@ public class RegisterActivity extends AppCompatActivity {
                 title_status.setVisibility(View.GONE);
                 subtitle_status.setVisibility(View.GONE);
                 btn_recon.setVisibility(View.GONE);
-                masih_kosong.setVisibility(View.VISIBLE);
-                constraintReserv.setBackgroundResource(R.color.colorSecondary);
+                label_pasien.setVisibility(View.VISIBLE);
+                label_reservasi.setVisibility(View.VISIBLE);
+                rekamedikEditText.setVisibility(View.VISIBLE);
+                namapasienEditText.setVisibility(View.VISIBLE);
+                tanggaljam.setVisibility(View.VISIBLE);
+                poliEditText.setVisibility(View.VISIBLE);
+                namadokterEditText.setVisibility(View.VISIBLE);
+                linearReserv.setBackgroundResource(R.color.colorWhite);
 
             }
         } else {
@@ -96,8 +111,14 @@ public class RegisterActivity extends AppCompatActivity {
             title_status.setVisibility(View.VISIBLE);
             subtitle_status.setVisibility(View.VISIBLE);
             btn_recon.setVisibility(View.VISIBLE);
-            masih_kosong.setVisibility(View.GONE);
-            constraintReserv.setBackgroundResource(R.color.colorPrimaryDark);
+            label_pasien.setVisibility(View.GONE);
+            label_reservasi.setVisibility(View.GONE);
+            rekamedikEditText.setVisibility(View.GONE);
+            namapasienEditText.setVisibility(View.GONE);
+            tanggaljam.setVisibility(View.GONE);
+            poliEditText.setVisibility(View.GONE);
+            namadokterEditText.setVisibility(View.GONE);
+            linearReserv.setBackgroundResource(R.color.colorPrimaryDark);
             Toast.makeText(getApplicationContext(),"Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
         }
 
