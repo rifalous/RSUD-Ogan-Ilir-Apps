@@ -85,7 +85,8 @@
         android:hint="No. Rekam Medik"
         android:inputType="number"
         app:met_floatingLabel="highlight"
-        app:met_maxCharacters="10" />
+        app:met_helperText="Tidak boleh lebih dari 6 karakter"
+        app:met_maxCharacters="6" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/namapasienEditText"
