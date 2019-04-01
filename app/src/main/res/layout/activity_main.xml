@@ -111,15 +111,15 @@
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
-                        android:id="@+id/medicine"
+                        android:id="@+id/facilities"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/medicine"
+                        android:src="@drawable/facilities"
                         android:contentDescription="@string/obat_logo" />
 
                     <TextView
                         android:layout_marginTop="6dp"
-                        android:text="@string/obat"
+                        android:text="@string/fasilitas"
                         android:textSize="16sp"
                         android:textColor="#6f6f6f"
                         android:layout_width="wrap_content"

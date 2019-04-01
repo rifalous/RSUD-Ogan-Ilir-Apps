@@ -16,8 +16,8 @@ import java.util.Objects;
  */
 public class ContactActivity extends AppCompatActivity {
 
-    double latitude = 40.714728;
-    double longitude = -73.998672;
+    double latitude = -3.256311;
+    double longitude = 104.646991;
 
     Toolbar toolbar;
 

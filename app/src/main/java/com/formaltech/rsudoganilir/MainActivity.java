@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView btnDoctor = findViewById(R.id.doctor);
-        ImageView btnMedicine = findViewById(R.id.medicine);
+        //ImageView btnMedicine = findViewById(R.id.medicine);
+        ImageView btnFacilities = findViewById(R.id.facilities);
         ImageView btnRoom = findViewById(R.id.room);
         ImageView btnRegist = findViewById(R.id.regist);
         ImageView btnContact = findViewById(R.id.contact);
@@ -31,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnMedicine.setOnClickListener(new View.OnClickListener() {
+        btnFacilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MedicineActivity.class));
+                startActivity(new Intent(MainActivity.this, FacilitiesActivity.class));
             }
         });
 

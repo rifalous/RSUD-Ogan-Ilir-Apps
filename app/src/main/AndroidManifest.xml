@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.formaltech.rsudoganilir">
+    <!-- Intent Phone Call Permissions -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,16 +13,23 @@
         android:roundIcon="@mipmap/ic_ogan_ilir_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".AboutActivity"
+        <activity
+            android:name=".FacilitiesActivity"
+            android:label="@string/fasilitas" />
+        <activity
+            android:name=".AboutActivity"
             android:label="@string/tentang_aplikasi" />
-        <activity android:name=".RoomActivity"
+        <activity
+            android:name=".RoomActivity"
             android:label="@string/info_kamar" />
-        <activity android:name=".RegisterActivity"
+        <activity
+            android:name=".RegisterActivity"
             android:label="@string/registrasi_pasien" />
-        <activity android:name=".MedicineActivity"
+        <activity
+            android:name=".MedicineActivity"
             android:label="@string/info_obat" />
-        <activity android:name=".DoctorActivity"
+        <activity
+            android:name=".DoctorActivity"
             android:label="@string/jadwal_dokter" />
         <activity
             android:name=".MainActivity"
@@ -33,6 +44,7 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -43,16 +55,12 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data android:scheme="geo" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
 
-    <!--  Intent Phone Call Permissions -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-
-    <!--  Internet Permissions -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
