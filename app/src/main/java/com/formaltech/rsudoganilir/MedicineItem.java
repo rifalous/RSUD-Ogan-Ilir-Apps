@@ -9,25 +9,25 @@ import android.os.Parcelable;
 public class MedicineItem implements Parcelable {
     private String nama, satuan, stok;
 
-    public MedicineItem(String nama, String satuan, String stok ) {
+    MedicineItem(String nama, String satuan, String stok) {
         this.nama = nama;
         this.satuan = satuan;
         this.stok = stok;
     }
 
-    public String getNama() {
+    String getNama() {
         return nama;
     }
 
-    public String getSatuan() {
+    String getSatuan() {
         return satuan;
     }
 
-    public String getStok() {
+    String getStok() {
         return stok;
     }
 
-    public void setNama(String satuan) {
+/*    public void setNama(String satuan) {
         this.nama = satuan;
     }
 
@@ -37,7 +37,7 @@ public class MedicineItem implements Parcelable {
 
     public void setStok(String stok) {
         this.stok = stok;
-    }
+    }*/
 
     @Override
     public int describeContents() {
@@ -51,10 +51,10 @@ public class MedicineItem implements Parcelable {
         parcel.writeString(this.stok);
     }
 
-    public MedicineItem(){
-    }
+/*    public MedicineItem(){
+    }*/
 
-    protected MedicineItem(Parcel in ){
+    private MedicineItem(Parcel in){
         this.nama = in.readString();
         this.satuan = in.readString();
         this.stok = in.readString();

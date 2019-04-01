@@ -32,7 +32,8 @@
             android:layout_width="225dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo"
+            android:contentDescription="@string/rsud_android_apps" />
 
         <TextView
             android:id="@+id/version"

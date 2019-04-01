@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Todo:
+    //- Button Tapped Effect
+    //- Activity Transition Effect
+    //- Optimize Facilities Layout
     //- Design Reservation Menu Screen	(To Do)
     //- Replace Medicine with Facilty (To Do)
     //- Implement Pull Refresh	(Doing)

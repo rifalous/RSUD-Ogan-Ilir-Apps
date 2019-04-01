@@ -96,7 +96,7 @@ public class RoomActivity extends AppCompatActivity {
             return 0;
         }
 
-        @SuppressLint("ViewHolder")
+        @SuppressLint({"ViewHolder", "InflateParams"})
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.room_list_item, null);

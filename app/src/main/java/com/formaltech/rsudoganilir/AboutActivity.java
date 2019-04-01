@@ -21,9 +21,7 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
         Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/MMedium.ttf");
-        Typeface Vidaloka = Typeface.createFromAsset(getAssets(), "fonts/Vidaloka.ttf");
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
