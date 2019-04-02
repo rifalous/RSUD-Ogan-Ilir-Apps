@@ -20,13 +20,15 @@
             android:label="@string/fasilitas" />
         <activity
             android:name=".AboutActivity"
-            android:label="@string/tentang_aplikasi" />
+            android:label="@string/tentang_aplikasi"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".RoomActivity"
             android:label="@string/info_kamar" />
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/registrasi_pasien" />
+            android:label="@string/registrasi_pasien"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".MedicineActivity"
             android:label="@string/info_obat" />

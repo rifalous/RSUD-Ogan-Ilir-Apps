@@ -1,16 +1,27 @@
 package com.formaltech.rsudoganilir;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.util.Log;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -18,45 +29,13 @@ import java.util.Objects;
  */
 public class RoomActivity extends AppCompatActivity {
 
-    String[] names = {
-            "Kamar Melati",
-            "Kamar Mawar",
-            "Kamar Cempaka",
-            "Kamar Dahlia",
-            "Kamar Anggrek",
-            "Kamar Bougenville",
-            "Kamar Lili",
-            "Kamar Teratai",
-            "Kamar Flamboyan"
-    };
+    private static final String JSON_URL = "https://rifalous.github.io/Pandora-Box/room.json";
 
-    String[] terisi = {
-            "7",
-            "2",
-            "6",
-            "4",
-            "5",
-            "7",
-            "8",
-            "9",
-            "10"
-    };
-
-    String[] kosong = {
-            "3",
-            "8",
-            "4",
-            "6",
-            "5",
-            "3",
-            "2",
-            "1",
-            "0"
-    };
-
-    Toolbar toolbar;
     ListView listView;
-    TextView namaKamar, terisiKamar, kosongKamar;
+    SwipeRefreshLayout mSwipeRefreshLayout;
+    RoomAdapter adapter;
+    private List<RoomItem> roomItemList;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,48 +50,65 @@ public class RoomActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        listView = findViewById(R.id.listView);
+        mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
+        listView =  findViewById(R.id.listView);
         listView.setDivider(null);
+        roomItemList = new ArrayList<>();
 
-        CustomAdapter customAdapter = new CustomAdapter();
-        listView.setAdapter(customAdapter);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mSwipeRefreshLayout.setRefreshing(true);
+                Log.d("Swipe", "Refreshing content");
 
+                adapter.clear();
+                roomItemList.clear();
+                adapter.notifyDataSetChanged();
+                loadPlayer();
+
+                Toast.makeText(RoomActivity.this, "Refreshed", Toast.LENGTH_LONG).show();
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+        loadPlayer();
     }
 
-    class CustomAdapter extends BaseAdapter {
-
+    private void loadPlayer() { StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
         @Override
-        public int getCount() {
-            return names.length;
+        public void onResponse(String response) {
+            try {
+                JSONObject obj = new JSONObject(response);
+                JSONArray roomArray = obj.getJSONArray("kamar");
+
+                for (int i = 0; i < roomArray.length(); i++) {
+                    JSONObject roomObject = roomArray.getJSONObject(i);
+                    RoomItem roomItem = new RoomItem(roomObject.getString("nama"),
+                            roomObject.getString("terisi"),
+                            roomObject.getString("kosong"));
+                    roomItemList.add(roomItem);
+                }
+
+                adapter = new RoomAdapter(roomItemList, getApplicationContext());
+                listView.setAdapter(adapter);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
+    },
 
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
+            new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @SuppressLint({"ViewHolder", "InflateParams"})
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            view = getLayoutInflater().inflate(R.layout.room_list_item, null);
-
-            namaKamar = view.findViewById(R.id.room_nama);
-            terisiKamar = view.findViewById(R.id.room_terisi);
-            kosongKamar = view.findViewById(R.id.room_kosong);
-
-            namaKamar.setText(names[i]);
-            terisiKamar.setText(terisi[i]);
-            kosongKamar.setText(kosong[i]);
-
-            return view;
-        }
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
-    
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

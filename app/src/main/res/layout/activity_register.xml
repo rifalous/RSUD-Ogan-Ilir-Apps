@@ -103,7 +103,6 @@
         android:layout_width="340dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:text="Reservasi"
@@ -111,12 +110,21 @@
         android:textSize="16sp" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/tanggaljam"
+        android:id="@+id/pilih_tanggal"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:hint="Tanggal dan Jam Berobat"
+        android:hint="Tanggal Berobat"
+        android:inputType="textPersonName"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/pilih_jam"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Jam Berobat"
         android:inputType="textPersonName"
         app:met_floatingLabel="highlight" />
 
@@ -149,6 +157,6 @@
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="8dp" />
 </LinearLayout>
 
