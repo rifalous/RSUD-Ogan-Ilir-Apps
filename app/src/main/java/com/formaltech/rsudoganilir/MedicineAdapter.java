@@ -1,6 +1,8 @@
 package com.formaltech.rsudoganilir;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,18 +20,19 @@ public class MedicineAdapter extends ArrayAdapter<MedicineItem> {
 
     private Context context;
 
-    public MedicineAdapter(List<MedicineItem> medicineItemList, Context context) {
+    MedicineAdapter(List<MedicineItem> medicineItemList, Context context) {
         super(context, R.layout.medicine_list_item, medicineItemList);
         this.medicineItemList = medicineItemList;
         this.context = context;
     }
 
+    @NonNull
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View listViewItem = inflater.inflate(R.layout.medicine_list_item, null, true);
+        @SuppressLint("ViewHolder") View listViewItem = inflater.inflate(R.layout.medicine_list_item, null, true);
         TextView textNamaObat = listViewItem.findViewById(R.id.medicine_nama);
         TextView textSatuanObat = listViewItem.findViewById(R.id.medicine_satuan);
         TextView textStokObat = listViewItem.findViewById(R.id.medicine_stok);

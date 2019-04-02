@@ -27,7 +27,8 @@ public class MedicineItem implements Parcelable {
         return stok;
     }
 
-/*    public void setNama(String satuan) {
+    /*
+    public void setNama(String satuan) {
         this.nama = satuan;
     }
 
@@ -51,8 +52,10 @@ public class MedicineItem implements Parcelable {
         parcel.writeString(this.stok);
     }
 
-/*    public MedicineItem(){
-    }*/
+    /*
+    public MedicineItem(){
+    }
+    */
 
     private MedicineItem(Parcel in){
         this.nama = in.readString();

@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView btnDoctor = findViewById(R.id.doctor);
-        //ImageView btnMedicine = findViewById(R.id.medicine);
         ImageView btnFacilities = findViewById(R.id.facilities);
         ImageView btnRoom = findViewById(R.id.room);
         ImageView btnRegist = findViewById(R.id.regist);
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Tekan tombol 'back' lagi untuk keluar", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
-
             @Override
             public void run() {
                 doubleBackToExitPressedOnce=false;
@@ -91,11 +89,11 @@ public class MainActivity extends AppCompatActivity {
     //- Button Tapped Effect
     //- Activity Transition Effect
     //- Optimize Facilities Layout
-    //- Design Reservation Menu Screen	(To Do)
-    //- Replace Medicine with Facilty (To Do)
     //- Implement Pull Refresh	(Doing)
     //- Implement JSON API display into ListView with Custom Adapter (Dokter, Kamar, Obat)	(Doing)
-    //- Date & Time Picker (To Do)
+    //- Date & Time Picker (Done)
+    //- Replace Medicine with Facilty (Done)
+    //- Design Reservation Menu Screen	(Done)
     //- Modify Doctor, Room Screen	    (Done)
     //- Implement Check Internet Connection	(Done)
     //- Remove All Warning Signs (Extract Strings)	(Done)
