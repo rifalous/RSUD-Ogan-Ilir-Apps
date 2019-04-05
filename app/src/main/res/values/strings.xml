@@ -53,4 +53,14 @@
     <string name="tidak_ada_internet">Tidak Ada Internet</string>
     <string name="tidak_terhubung_ke_internet">Sepertinya perangkat kamu tidak terhubung ke Internet</string>
     <string name="reconnect">RECONNECT</string>
+    <string name="no_internet_image">No Internet Image</string>
+    <string name="pasien">Pasien</string>
+    <string name="no_rekam_medik">No. Rekam Medik</string>
+    <string name="nama_pasien">Nama Pasien</string>
+    <string name="reservasi">Reservasi</string>
+    <string name="tanggal_berobat">Tanggal Berobat</string>
+    <string name="jam_berobat">Jam Berobat</string>
+    <string name="poli">Poli</string>
+    <string name="dokter">Dokter</string>
+    <string name="submit">SUBMIT</string>
 </resources>

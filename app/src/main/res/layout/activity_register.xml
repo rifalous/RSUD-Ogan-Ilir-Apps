@@ -20,7 +20,8 @@
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:src="@drawable/icinternet"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/no_internet_image" />
 
     <TextView
         android:id="@+id/title_status"
@@ -72,7 +73,7 @@
         android:layout_marginTop="32dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        android:text="Pasien"
+        android:text="@string/pasien"
         android:textColor="@color/colorWhite"
         android:textSize="16sp" />
 
@@ -82,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:hint="No. Rekam Medik"
+        android:hint="@string/no_rekam_medik"
         android:inputType="number"
         app:met_helperText="Tidak boleh lebih dari 6 karakter"
         app:met_floatingLabel="highlight"
@@ -94,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
-        android:hint="Nama Pasien"
+        android:hint="@string/nama_pasien"
         android:inputType="textPersonName"
         app:met_floatingLabel="highlight" />
 
@@ -105,7 +106,7 @@
         android:layout_gravity="center"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        android:text="Reservasi"
+        android:text="@string/reservasi"
         android:textColor="@color/colorWhite"
         android:textSize="16sp" />
 
@@ -115,8 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:hint="Tanggal Berobat"
-        android:inputType="textPersonName"
+        android:hint="@string/tanggal_berobat"
+        android:inputType="date"
         app:met_floatingLabel="highlight" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -124,8 +125,8 @@
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Jam Berobat"
-        android:inputType="textPersonName"
+        android:hint="@string/jam_berobat"
+        android:inputType="datetime"
         app:met_floatingLabel="highlight" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -133,7 +134,7 @@
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Poli"
+        android:hint="@string/poli"
         android:inputType="text"
         app:met_floatingLabel="highlight" />
 
@@ -142,7 +143,7 @@
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Dokter"
+        android:hint="@string/dokter"
         android:inputType="textPersonName"
         app:met_floatingLabel="highlight" />
 
@@ -153,7 +154,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@color/colorPrimaryDark"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
