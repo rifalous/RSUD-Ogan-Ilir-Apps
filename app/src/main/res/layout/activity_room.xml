@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RoomActivity"
+    android:id="@+id/linearReserv"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -11,6 +12,56 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/no_internet_iv"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:src="@drawable/icinternet"
+        android:visibility="gone"
+        android:contentDescription="@string/no_internet_image" />
+
+    <TextView
+        android:id="@+id/title_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tidak_ada_internet"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp" />
+
+    <TextView
+        android:id="@+id/subtitle_status"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/tidak_terhubung_ke_internet"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp" />
+
+    <Button
+        android:id="@+id/btn_recon"
+        android:layout_width="260dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bgbtnrecon"
+        android:paddingBottom="23dp"
+        android:text="@string/reconnect"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="658dp" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"

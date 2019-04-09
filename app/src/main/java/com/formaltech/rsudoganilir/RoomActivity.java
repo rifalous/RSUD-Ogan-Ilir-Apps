@@ -1,12 +1,21 @@
 package com.formaltech.rsudoganilir;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -33,9 +42,13 @@ public class RoomActivity extends AppCompatActivity {
 
     ListView listView;
     SwipeRefreshLayout mSwipeRefreshLayout;
+    LinearLayout linearReserv;
     RoomAdapter adapter;
     private List<RoomItem> roomItemList;
     Toolbar toolbar;
+    Button btn_recon;
+    ImageView no_internet_iv;
+    TextView title_status, subtitle_status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +68,27 @@ public class RoomActivity extends AppCompatActivity {
         listView.setDivider(null);
         roomItemList = new ArrayList<>();
 
+        title_status = findViewById(R.id.title_status);
+        subtitle_status = findViewById(R.id.subtitle_status);
+        no_internet_iv = findViewById(R.id.no_internet_iv);
+        btn_recon = findViewById(R.id.btn_recon);
+        linearReserv = findViewById(R.id.linearReserv);
+
+        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
+        Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/MMedium.ttf");
+        Typeface Vidaloka = Typeface.createFromAsset(getAssets(), "fonts/Vidaloka.ttf");
+
+        title_status.setTypeface(Vidaloka);
+        subtitle_status.setTypeface(MLight);
+        btn_recon.setTypeface(MMedium);
+
+        btn_recon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkNetworkConnectStatus();
+            }
+        });
+
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -72,6 +106,7 @@ public class RoomActivity extends AppCompatActivity {
         });
 
         loadPlayer();
+        checkNetworkConnectStatus();
     }
 
     private void loadPlayer() { StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
@@ -107,6 +142,39 @@ public class RoomActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    private void checkNetworkConnectStatus() {
+        boolean wifiConnected;
+        boolean mobileConnected;
+
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeInfo = connMgr.getActiveNetworkInfo();
+
+        if (activeInfo != null && activeInfo.isConnected()) {
+            wifiConnected = activeInfo.getType() == ConnectivityManager.TYPE_WIFI;
+            mobileConnected = activeInfo.getType() == ConnectivityManager.TYPE_MOBILE;
+
+            if (wifiConnected || mobileConnected) {
+                toolbar.setVisibility(View.VISIBLE);
+                no_internet_iv.setVisibility(View.GONE);
+                title_status.setVisibility(View.GONE);
+                subtitle_status.setVisibility(View.GONE);
+                btn_recon.setVisibility(View.GONE);
+                listView.setVisibility(View.VISIBLE);
+                linearReserv.setBackgroundResource(R.color.colorWhite);
+            }
+        } else {
+            toolbar.setVisibility(View.GONE);
+            no_internet_iv.setVisibility(View.VISIBLE);
+            title_status.setVisibility(View.VISIBLE);
+            subtitle_status.setVisibility(View.VISIBLE);
+            btn_recon.setVisibility(View.VISIBLE);
+            listView.setVisibility(View.GONE);
+            linearReserv.setBackgroundResource(R.color.colorPrimaryDark);
+            Toast.makeText(getApplicationContext(),"Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
