@@ -88,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
     //Todo:
     //- Button Tapped Effect
     //- Activity Transition Effect
-    //- Optimize Facilities Layout
     //- Implement Pull Refresh	(Doing)
-    //- Implement JSON API display into ListView with Custom Adapter (Dokter, Kamar, Obat)	(Doing)
+    //- Implement JSON API display into ListView with Custom Adapter (Ruangan)	(Doing)
     //- Date & Time Picker (Done)
+    //- Optimize Facilities Layout (Done)
     //- Replace Medicine with Facilty (Done)
     //- Design Reservation Menu Screen	(Done)
     //- Modify Doctor, Room Screen	    (Done)
