@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -17,49 +18,49 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView btnDoctor = findViewById(R.id.doctor);
-        ImageView btnFacilities = findViewById(R.id.facilities);
-        ImageView btnRoom = findViewById(R.id.room);
-        ImageView btnRegist = findViewById(R.id.regist);
-        ImageView btnContact = findViewById(R.id.contact);
-        ImageView btnAbout = findViewById(R.id.about);
+        CardView cvDoctor = findViewById(R.id.cvDoctor);
+        CardView cvFacilities = findViewById(R.id.cvFacilities);
+        CardView cvRoom = findViewById(R.id.cvRoom);
+        CardView cvReservation = findViewById(R.id.cvReservation);
+        CardView cvContact = findViewById(R.id.cvContact);
+        CardView cvAbout = findViewById(R.id.cvAbout);
 
-        btnDoctor.setOnClickListener(new View.OnClickListener() {
+        cvDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, DoctorActivity.class));
             }
         });
 
-        btnFacilities.setOnClickListener(new View.OnClickListener() {
+        cvFacilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, FacilitiesActivity.class));
             }
         });
 
-        btnRoom.setOnClickListener(new View.OnClickListener() {
+        cvRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RoomActivity.class));
             }
         });
 
-        btnRegist.setOnClickListener(new View.OnClickListener() {
+        cvReservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
 
-        btnAbout.setOnClickListener(new View.OnClickListener() {
+        cvAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
         });
 
-        btnContact.setOnClickListener(new View.OnClickListener() {
+        cvContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ContactActivity.class));
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Todo:
-    //- Button Tapped Effect
+    //- Button Tapped Effect (Done)
     //- Activity Transition Effect
     //- Implement Pull Refresh	(Doing)
     //- Implement JSON API display into ListView with Custom Adapter (Ruangan)	(Doing)

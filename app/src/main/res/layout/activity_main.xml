@@ -58,10 +58,13 @@
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvDoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
@@ -94,10 +97,13 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvFacilities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
@@ -130,10 +136,13 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvRoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
@@ -167,10 +176,13 @@
 
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvReservation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
@@ -204,10 +216,13 @@
 
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
@@ -241,10 +256,13 @@
 
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvAbout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
