@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,16 +8,16 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
 
             <TextView
                 android:id="@+id/dashboard"
@@ -28,46 +27,48 @@
                 android:text="@string/app_name"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
+
             <TextView
-                android:layout_toEndOf="@id/logo"
                 android:id="@+id/subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/dashboard"
                 android:layout_marginTop="6dp"
+                android:layout_toEndOf="@id/logo"
                 android:text="@string/selamat_datang"
-                android:visibility="visible"
-                android:textSize="14sp"
                 android:textColor="#52BAFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="14sp"
+                android:visibility="visible" />
+
             <ImageView
                 android:id="@+id/logo"
-                android:layout_marginEnd="6dp"
-                android:layout_alignParentStart="true"
                 android:layout_width="62dp"
                 android:layout_height="62dp"
-                android:src="@drawable/logo"/>
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/logo" />
 
         </RelativeLayout>
-        
+
         <GridLayout
-            android:columnCount="2"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cvDoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -81,13 +82,13 @@
                         android:id="@+id/doctor"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/doctor"
-                        android:contentDescription="@string/dokter_logo" />
+                        android:contentDescription="@string/dokter_logo"
+                        android:src="@drawable/doctor" />
 
                     <TextView
-                        android:layout_marginTop="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="@string/dokter"
                         android:textColor="#6f6f6f"
                         android:textSize="16sp" />
@@ -100,36 +101,36 @@
                 android:id="@+id/cvFacilities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/facilities"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/facilities"
-                        android:contentDescription="@string/obat_logo" />
+                        android:contentDescription="@string/obat_logo"
+                        android:src="@drawable/facilities" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/fasilitas"
-                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -139,36 +140,36 @@
                 android:id="@+id/cvRoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/room"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/room"
-                        android:contentDescription="@string/kamar_logo" />
+                        android:contentDescription="@string/kamar_logo"
+                        android:src="@drawable/room" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/kamar"
-                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -179,36 +180,36 @@
                 android:id="@+id/cvReservation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/regist"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/registration"
-                        android:contentDescription="@string/registrasi_logo" />
+                        android:contentDescription="@string/registrasi_logo"
+                        android:src="@drawable/registration" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/reservasi"
-                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -219,36 +220,36 @@
                 android:id="@+id/cvContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/contact"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/contacts"
-                        android:contentDescription="@string/kontak_logo" />
+                        android:contentDescription="@string/kontak_logo"
+                        android:src="@drawable/contacts" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/kontak"
-                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -259,36 +260,36 @@
                 android:id="@+id/cvAbout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/about"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/about"
-                        android:contentDescription="@string/tentang_logo" />
+                        android:contentDescription="@string/tentang_logo"
+                        android:src="@drawable/about" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/tentang"
-                        android:textSize="16sp"
                         android:textColor="#6f6f6f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 

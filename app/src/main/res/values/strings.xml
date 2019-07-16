@@ -60,4 +60,9 @@
     <string name="tanggal_berobat">Tanggal Berobat</string>
     <string name="jam_berobat">Jam Berobat</string>
     <string name="submit">SUBMIT</string>
+    <string name="tempat_parkir">Tempat Parkir</string>
+    <string name="auditorium">Auditorium</string>
+    <string name="mobil_ambulance">Mobil Ambulance</string>
+    <string name="ruang_rawat_inap">Ruang Rawat Inap</string>
+    <string name="point">:</string>
 </resources>

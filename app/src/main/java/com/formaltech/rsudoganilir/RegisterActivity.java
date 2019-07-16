@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
             poliEditText.setVisibility(View.GONE);
             namadokterEditText.setVisibility(View.GONE);
             linearReserv.setBackgroundResource(R.color.colorPrimaryDark);
-            Toast.makeText(getApplicationContext(),"Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
         }
 
     }

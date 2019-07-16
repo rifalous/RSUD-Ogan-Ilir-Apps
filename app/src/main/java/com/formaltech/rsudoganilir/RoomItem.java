@@ -36,13 +36,13 @@ public class RoomItem implements Parcelable {
         parcel.writeString(this.kosong);
     }
 
-    private RoomItem(Parcel in){
+    private RoomItem(Parcel in) {
         this.nama = in.readString();
         this.terisi = in.readString();
         this.kosong = in.readString();
     }
 
-    public static final Parcelable.Creator<RoomItem> CREATOR = new Parcelable.Creator<RoomItem>(){
+    public static final Parcelable.Creator<RoomItem> CREATOR = new Parcelable.Creator<RoomItem>() {
 
         @Override
         public RoomItem createFromParcel(Parcel source) {

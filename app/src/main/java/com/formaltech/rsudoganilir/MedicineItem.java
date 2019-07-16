@@ -57,13 +57,13 @@ public class MedicineItem implements Parcelable {
     }
     */
 
-    private MedicineItem(Parcel in){
+    private MedicineItem(Parcel in) {
         this.nama = in.readString();
         this.satuan = in.readString();
         this.stok = in.readString();
     }
 
-    public static final Parcelable.Creator<MedicineItem> CREATOR = new Parcelable.Creator<MedicineItem>(){
+    public static final Parcelable.Creator<MedicineItem> CREATOR = new Parcelable.Creator<MedicineItem>() {
 
         @Override
         public MedicineItem createFromParcel(Parcel source) {

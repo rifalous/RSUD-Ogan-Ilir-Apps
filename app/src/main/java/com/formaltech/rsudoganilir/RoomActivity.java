@@ -64,7 +64,7 @@ public class RoomActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
-        listView =  findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         listView.setDivider(null);
         roomItemList = new ArrayList<>();
 
@@ -109,36 +109,37 @@ public class RoomActivity extends AppCompatActivity {
         checkNetworkConnectStatus();
     }
 
-    private void loadPlayer() { StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
-        @Override
-        public void onResponse(String response) {
-            try {
-                JSONObject obj = new JSONObject(response);
-                JSONArray roomArray = obj.getJSONArray("kamar");
+    private void loadPlayer() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject obj = new JSONObject(response);
+                    JSONArray roomArray = obj.getJSONArray("kamar");
 
-                for (int i = 0; i < roomArray.length(); i++) {
-                    JSONObject roomObject = roomArray.getJSONObject(i);
-                    RoomItem roomItem = new RoomItem(roomObject.getString("nama"),
-                            roomObject.getString("terisi"),
-                            roomObject.getString("kosong"));
-                    roomItemList.add(roomItem);
+                    for (int i = 0; i < roomArray.length(); i++) {
+                        JSONObject roomObject = roomArray.getJSONObject(i);
+                        RoomItem roomItem = new RoomItem(roomObject.getString("nama"),
+                                roomObject.getString("terisi"),
+                                roomObject.getString("kosong"));
+                        roomItemList.add(roomItem);
+                    }
+
+                    adapter = new RoomAdapter(roomItemList, getApplicationContext());
+                    listView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-
-                adapter = new RoomAdapter(roomItemList, getApplicationContext());
-                listView.setAdapter(adapter);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
-        }
-    },
+        },
 
-            new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
@@ -172,7 +173,7 @@ public class RoomActivity extends AppCompatActivity {
             btn_recon.setVisibility(View.VISIBLE);
             listView.setVisibility(View.GONE);
             linearReserv.setBackgroundResource(R.color.colorPrimaryDark);
-            Toast.makeText(getApplicationContext(),"Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Tidak Terhubung ke Internet", Toast.LENGTH_SHORT).show();
         }
 
     }

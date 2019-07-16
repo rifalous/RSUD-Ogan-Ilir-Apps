@@ -19,20 +19,20 @@
         android:id="@+id/no_internet_iv"
         android:layout_width="360dp"
         android:layout_height="360dp"
+        android:contentDescription="@string/no_internet_image"
         android:src="@drawable/icinternet"
-        android:visibility="gone"
-        android:contentDescription="@string/no_internet_image" />
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/title_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:text="@string/tidak_ada_internet"
         android:textColor="#fff"
         android:textSize="28sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp" />
 
     <TextView
@@ -40,13 +40,13 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:lineSpacingExtra="6dp"
         android:text="@string/tidak_terhubung_ke_internet"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="18sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp" />
 
     <Button
@@ -54,6 +54,7 @@
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bgbtnrecon"
         android:paddingBottom="23dp"
         android:text="@string/reconnect"
@@ -61,7 +62,6 @@
         android:textColor="#fff"
         android:textSize="20sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="658dp" />
 
@@ -85,8 +85,8 @@
         android:layout_marginTop="8dp"
         android:hint="@string/no_rekam_medik"
         android:inputType="number"
-        app:met_helperText="Tidak boleh lebih dari 6 karakter"
         app:met_floatingLabel="highlight"
+        app:met_helperText="Tidak boleh lebih dari 6 karakter"
         app:met_maxCharacters="6" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -153,11 +153,11 @@
         android:layout_width="340dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/submit"
         android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="20sp"
-        android:layout_marginTop="8dp" />
+        android:textSize="20sp" />
 </LinearLayout>
 

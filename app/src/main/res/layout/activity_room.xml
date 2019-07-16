@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearReserv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RoomActivity"
-    android:id="@+id/linearReserv"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".RoomActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimaryDark"/>
+        android:background="?attr/colorPrimaryDark" />
 
     <ImageView
         android:id="@+id/no_internet_iv"
         android:layout_width="360dp"
         android:layout_height="360dp"
+        android:contentDescription="@string/no_internet_image"
         android:src="@drawable/icinternet"
-        android:visibility="gone"
-        android:contentDescription="@string/no_internet_image" />
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/title_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:text="@string/tidak_ada_internet"
         android:textColor="#fff"
         android:textSize="28sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp" />
 
     <TextView
@@ -38,13 +38,13 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:lineSpacingExtra="6dp"
         android:text="@string/tidak_terhubung_ke_internet"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="18sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp" />
 
     <Button
@@ -52,6 +52,7 @@
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bgbtnrecon"
         android:paddingBottom="23dp"
         android:text="@string/reconnect"
@@ -59,7 +60,6 @@
         android:textColor="#fff"
         android:textSize="20sp"
         android:visibility="gone"
-        android:layout_marginTop="32dp"
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="658dp" />
 
@@ -67,11 +67,11 @@
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <ListView
             android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
+            android:layout_height="wrap_content" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
 

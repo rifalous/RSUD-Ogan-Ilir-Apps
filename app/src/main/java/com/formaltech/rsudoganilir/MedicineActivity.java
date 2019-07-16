@@ -27,7 +27,7 @@ import java.util.Objects;
 /**
  * Created by Rifal on 14/03/2019.
  */
-public class MedicineActivity  extends AppCompatActivity {
+public class MedicineActivity extends AppCompatActivity {
 
     private static final String JSON_URL = "https://rifalous.github.io/Pandora-Box/medicine.json";
 
@@ -51,7 +51,7 @@ public class MedicineActivity  extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
-        listView =  findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         listView.setDivider(null);
         medicineItemList = new ArrayList<>();
 
@@ -74,7 +74,8 @@ public class MedicineActivity  extends AppCompatActivity {
         loadPlayer();
     }
 
-    private void loadPlayer() { StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
+    private void loadPlayer() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -96,17 +97,17 @@ public class MedicineActivity  extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-            },
+        },
 
-            new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
     @Override

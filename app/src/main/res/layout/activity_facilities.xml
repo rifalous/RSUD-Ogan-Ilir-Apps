@@ -15,14 +15,14 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimaryDark"/>
+            android:background="?attr/colorPrimaryDark" />
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="2dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
@@ -31,21 +31,22 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_centerInParent="true"
                 android:gravity="center_vertical"
-                android:layout_centerInParent="true">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#89969F">
+
                     <ImageView
                         android:id="@+id/iv_overlay"
                         android:layout_width="match_parent"
                         android:layout_height="196dp"
-                        android:src="@drawable/ruanganvip"
+                        android:layout_centerInParent="true"
                         android:scaleType="centerCrop"
-                        android:layout_centerInParent="true" />
+                        android:src="@drawable/ruanganvip" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -53,17 +54,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#80000000"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:textSize="22sp"
-                        android:text="Ruang Rawat Inap"
-                        android:textColor="@color/colorWhite"
                         android:layout_gravity="center"
-                        android:padding="8dp" />
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/ruang_rawat_inap"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
             </FrameLayout>
@@ -73,8 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="2dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
@@ -83,21 +84,22 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_centerInParent="true"
                 android:gravity="center_vertical"
-                android:layout_centerInParent="true">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#89969F">
+
                     <ImageView
                         android:id="@+id/iv_overlay2"
                         android:layout_width="match_parent"
                         android:layout_height="196dp"
-                        android:src="@drawable/ambulance"
+                        android:layout_centerInParent="true"
                         android:scaleType="centerCrop"
-                        android:layout_centerInParent="true" />
+                        android:src="@drawable/ambulance" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -105,17 +107,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#80000000"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:textSize="22sp"
-                        android:text="Mobil Ambulance"
-                        android:textColor="@color/colorWhite"
                         android:layout_gravity="center"
-                        android:padding="8dp" />
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/mobil_ambulance"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
             </FrameLayout>
@@ -125,8 +127,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="2dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
@@ -135,21 +137,22 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_centerInParent="true"
                 android:gravity="center_vertical"
-                android:layout_centerInParent="true">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#89969F">
+
                     <ImageView
                         android:id="@+id/iv_overlay3"
                         android:layout_width="match_parent"
                         android:layout_height="196dp"
-                        android:src="@drawable/aula"
+                        android:layout_centerInParent="true"
                         android:scaleType="centerCrop"
-                        android:layout_centerInParent="true" />
+                        android:src="@drawable/aula" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -157,17 +160,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#80000000"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:textSize="22sp"
-                        android:text="Auditorium"
-                        android:textColor="@color/colorWhite"
                         android:layout_gravity="center"
-                        android:padding="8dp" />
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/auditorium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
             </FrameLayout>
@@ -177,8 +180,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="2dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
@@ -187,21 +190,22 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_centerInParent="true"
                 android:gravity="center_vertical"
-                android:layout_centerInParent="true">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#89969F">
+
                     <ImageView
                         android:id="@+id/iv_overlay4"
                         android:layout_width="match_parent"
                         android:layout_height="196dp"
-                        android:src="@drawable/parkir"
+                        android:layout_centerInParent="true"
                         android:scaleType="centerCrop"
-                        android:layout_centerInParent="true" />
+                        android:src="@drawable/parkir" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -209,17 +213,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#80000000"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:textSize="22sp"
-                        android:text="Tempat Parkir"
-                        android:textColor="@color/colorWhite"
                         android:layout_gravity="center"
-                        android:padding="8dp" />
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/tempat_parkir"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
             </FrameLayout>
