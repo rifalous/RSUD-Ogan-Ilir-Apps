@@ -3,6 +3,7 @@ package com.formaltech.rsudoganilir;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     boolean doubleBackToExitPressedOnce = false;
+    private static final long MIN_CLICK_INTERVAL = 600;
+    private long mLastClickTime;
+    public static boolean isViewClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
         cvDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, DoctorActivity.class));
             }
         });
@@ -34,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
         cvFacilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, FacilitiesActivity.class));
             }
         });
@@ -41,6 +71,19 @@ public class MainActivity extends AppCompatActivity {
         cvRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, RoomActivity.class));
             }
         });
@@ -48,6 +91,19 @@ public class MainActivity extends AppCompatActivity {
         cvReservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
@@ -55,6 +111,19 @@ public class MainActivity extends AppCompatActivity {
         cvAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
         });
@@ -62,6 +131,19 @@ public class MainActivity extends AppCompatActivity {
         cvContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long currentClickTime = SystemClock.uptimeMillis();
+                long elapsedTime = currentClickTime - mLastClickTime;
+
+                mLastClickTime = currentClickTime;
+
+                if (elapsedTime <= MIN_CLICK_INTERVAL)
+                    return;
+                if (!isViewClicked) {
+                    isViewClicked = true;
+                    startTimer();
+                } else {
+                    return;
+                }
                 startActivity(new Intent(MainActivity.this, ContactActivity.class));
             }
         });
@@ -83,6 +165,19 @@ public class MainActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
+    }
+
+    private void startTimer() {
+        Handler handler = new Handler();
+
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                isViewClicked = false;
+            }
+        }, 600);
+
     }
 
     //Todo:

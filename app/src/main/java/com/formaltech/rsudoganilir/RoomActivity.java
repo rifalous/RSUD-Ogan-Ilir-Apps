@@ -101,7 +101,6 @@ public class RoomActivity extends AppCompatActivity {
                 loadPlayer();
 
                 Toast.makeText(RoomActivity.this, "Refreshed", Toast.LENGTH_LONG).show();
-                mSwipeRefreshLayout.setRefreshing(false);
             }
         });
 
@@ -127,8 +126,10 @@ public class RoomActivity extends AppCompatActivity {
 
                     adapter = new RoomAdapter(roomItemList, getApplicationContext());
                     listView.setAdapter(adapter);
+                    mSwipeRefreshLayout.setRefreshing(false);
 
                 } catch (JSONException e) {
+                    mSwipeRefreshLayout.setRefreshing(false);
                     e.printStackTrace();
                 }
             }
