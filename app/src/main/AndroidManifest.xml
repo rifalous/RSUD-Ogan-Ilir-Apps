@@ -30,9 +30,6 @@
             android:label="@string/registrasi_pasien"
             android:screenOrientation="nosensor" />
         <activity
-            android:name=".MedicineActivity"
-            android:label="@string/info_obat" />
-        <activity
             android:name=".DoctorActivity"
             android:label="@string/jadwal_dokter" />
         <activity
