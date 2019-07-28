@@ -1,2 +1,2 @@
 ## RSUD Ogan Ilir Apps
-Android Apps for RSUD Ogan Ilir
+Android App for RSUD Ogan Ilir
